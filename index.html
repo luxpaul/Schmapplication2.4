@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schmack</title>
+  
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "562a2de4-404a-4ad4-aa9d-ee11dbf3393e",
+      safari_web_id: "web.onesignal.auto.12345678-1234-1234-1234-123456789012", // optional
+      notifyButton: {
+        enable: true,
+      },
+      serviceWorkerPath: "OneSignalSDKWorker.js"
+    });
+  });
+</script>
+
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
