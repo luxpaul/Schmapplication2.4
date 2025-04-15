@@ -12,6 +12,10 @@ export default function SchmackApp({ user }) {
   const [receivedMessage, setReceivedMessage] = useState("");
   const [messageLog, setMessageLog] = useState([]);
   const [sharedCounter, setSharedCounter] = useState(0);
+const anniversaryDate = new Date(2020, 11, 3); // 03.12.2020 (Monate: 0-basiert!)
+const today = new Date();
+const daysSince = Math.floor((today - anniversaryDate) / (1000 * 60 * 60 * 24));
+
 
   useEffect(() => {
     const fetchCounter = async () => {
@@ -119,6 +123,9 @@ export default function SchmackApp({ user }) {
       </p>
 
       <h1 className="text-2xl font-semibold mt-2">Hallo {user} 💌</h1>
+<p className="text-sm text-pink-600">
+  💘 Seit {daysSince} Tagen verliebt.
+</p>
 
       <textarea
         className="border rounded p-2 w-full max-w-xs text-lg"
