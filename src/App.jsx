@@ -118,9 +118,7 @@ const daysSince = Math.floor((today - anniversaryDate) / (1000 * 60 * 60 * 24));
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen bg-white gap-4 text-center px-4 pt-8">
-      <p className="text-sm italic text-gray-500 max-w-md">
-        🐾 Zitat des Tages: "Ein Leben ohne Hund ist möglich, aber sinnlos. – Xie-Xie"
-      </p>
+    
 
       <h1 className="text-2xl font-semibold mt-2">Hallo {user} 💌</h1>
 <p className="text-sm text-pink-600">
